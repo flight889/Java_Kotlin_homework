@@ -11,8 +11,8 @@ public class Ticket {
 
     public void print() {
         int ticketPrice = 1000;
-        int RoundTripTicketPrice = 1800;
-        int totalPrice = numOfRoundTripTickets * RoundTripTicketPrice + (totalNumOfTickets - numOfRoundTripTickets) * ticketPrice;
+        int roundTripTicketPrice = 1800;
+        int totalPrice = numOfRoundTripTickets * roundTripTicketPrice + (totalNumOfTickets - numOfRoundTripTickets) * ticketPrice;
         System.out.println("Total tickets: " + totalNumOfTickets);
         System.out.println("Round-trip: " + numOfRoundTripTickets);
         System.out.println("Total: " + totalPrice);

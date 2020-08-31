@@ -21,10 +21,10 @@ fun main() {
 class TicketKT (var totalNumOfTickets: Int, var numOfRoundTripTickets: Int) {
     fun print() {
         val ticketPrice = 1000
-        val RoundTripTicketPrice = 1800
-        val totalPrice = numOfRoundTripTickets * RoundTripTicketPrice + (totalNumOfTickets - numOfRoundTripTickets) * ticketPrice
-        println("Total tickets: " + totalNumOfTickets)
-        println("Round-trip: " + numOfRoundTripTickets)
-        println("Total: " + totalPrice)
+        val roundTripTicketPrice = 1800
+        val totalPrice = numOfRoundTripTickets * roundTripTicketPrice + (totalNumOfTickets - numOfRoundTripTickets) * ticketPrice
+        println("Total tickets: $totalNumOfTickets")
+        println("Round-trip: $numOfRoundTripTickets")
+        println("Total: $totalPrice")
     }
 }
