@@ -4,13 +4,18 @@ import java.util.*
 
 fun main() {
     val scanner = Scanner(System.`in`)
-    print("Please enter number of tickets: ")
-    var totalNumOfTickets = scanner.nextInt()
-    print("How many round-trip tickets: ")
-    var numOfRoundTripTickets = scanner.nextInt()
+    var totalNumOfTickets = 0
+    while (totalNumOfTickets != -1) {
+        print("Please enter number of tickets: ")
+        totalNumOfTickets = scanner.nextInt()
+        if  (totalNumOfTickets != -1) {
+            print("How many round-trip tickets: ")
+            var numOfRoundTripTickets = scanner.nextInt()
 
-    val ticket = TicketKT(totalNumOfTickets,numOfRoundTripTickets)
-    ticket.print()
+            val ticket = TicketKT(totalNumOfTickets, numOfRoundTripTickets)
+            ticket.print()
+        }
+    }
 }
 
 class TicketKT (var totalNumOfTickets: Int, var numOfRoundTripTickets: Int) {

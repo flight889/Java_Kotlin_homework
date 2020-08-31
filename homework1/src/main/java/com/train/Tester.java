@@ -6,12 +6,17 @@ public class Tester {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Please enter number of tickets: ");
-        int totalNumOfTickets  = scanner.nextInt();
-        System.out.print("How many round-trip tickets: ");
-        int numOfRoundTripTickets = scanner.nextInt();
+        int totalNumOfTickets = 0;
+        while (totalNumOfTickets != -1) {
+            System.out.print("Please enter number of tickets: ");
+            totalNumOfTickets = scanner.nextInt();
+            if (totalNumOfTickets != -1) {
+                System.out.print("How many round-trip tickets: ");
+                int numOfRoundTripTickets = scanner.nextInt();
 
-        Ticket ticket = new Ticket(totalNumOfTickets, numOfRoundTripTickets);
-        ticket.print();
+                Ticket ticket = new Ticket(totalNumOfTickets, numOfRoundTripTickets);
+                ticket.print();
+            }
+        }
     }
 }
